@@ -21,19 +21,15 @@ root = Tk()
 drink = IntVar()
 D1 = Radiobutton(root, text="Redbull & Vodka", indicatoron=0, width=25, variable=drink, value=1,
                   command=sel)
-D1.place(x=50, y=30)
+D1.place(x=50, y=50)
 
 D2 = Radiobutton(root, text="Sangria", indicatoron=0, width=25, variable=drink, value=2,
                   command=sel)
-D2.place(x=300, y=30)
+D2.place(x=300, y=50)
 
 D3 = Radiobutton(root, text="Tequila sunrise", indicatoron=0, width=25, variable=drink, value=3,
                   command=sel)
-D3.place(x=550, y=30)
-
-
-
-#HÄR SKA VA RADBRYTNING
+D3.place(x=550, y=50)
 
 
 var = IntVar()
