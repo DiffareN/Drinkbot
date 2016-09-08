@@ -3,7 +3,6 @@
 # Feel free to use the code as long as this text stays intact#
 ##############################################################
 from tkinter import *
-from drinkar.py import *
 	
 def sel():
 	if str(drink.get()) == '1':
