@@ -2,7 +2,12 @@
 # Drinkbot by Fredrik "Diffe" Sandstrom and Rikard Johansson #
 # Feel free to use the code as long as this text stays intact#
 ##############################################################
+##############################################################
+# Drinkbot by Fredrik "Diffe" Sandstrom and Rikard Johansson #
+# Feel free to use the code as long as this text stays intact#
+##############################################################
 from tkinter import *
+from drinkar import * 
 	
 def sel():
 	if str(drink.get()) == '1':
@@ -18,23 +23,23 @@ def sel():
 	label.config(text = selection)
 
 root = Tk()
-
 drink = IntVar()
 D1 = Radiobutton(root, text="Redbull & Vodka", indicatoron=0, width=25, variable=drink, value=1,
                   command=sel)
-D1.pack( side = LEFT )
+D1.place(x=30, y=0)
 
 D2 = Radiobutton(root, text="Sangria", indicatoron=0, width=25, variable=drink, value=2,
                   command=sel)
-D2.pack( side = LEFT )
+D2.place(x=280, y=0)
 
 D3 = Radiobutton(root, text="Tequila sunrise", indicatoron=0, width=25, variable=drink, value=3,
                   command=sel)
-D3.pack( side = LEFT )
+D3.place(x=530, y=0)
+
 
 
 #HÄR SKA VA RADBRYTNING
-print ("Välj styrka på drinken:")
+
 
 var = IntVar()
 R1 = Radiobutton(root, text="4 cl", indicatoron=0, width=10, variable=var, value=4,
@@ -51,8 +56,8 @@ R3.pack( side = LEFT )
 
 label = Label(root)
 label.pack()
-w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 root.overrideredirect(1)
-root.geometry("%dx%d+0+0" % (w, h))
+root.geometry("800x480")
 root.bind("<Escape>", lambda e: e.widget.quit())
 root.mainloop()
+
