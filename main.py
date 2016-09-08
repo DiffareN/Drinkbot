@@ -16,25 +16,24 @@ def sel():
 		drinknamn = "Sangria"
 	elif str(drink.get()) == '3':
 		drinknamn = "Tequila sunrise"
-	else:
-		drinknamn = "Du har inte valt en drink!"
-		
+
 	selection = "Du har valt " + str(var.get()) + " cl och " + drinknamn
-	label.config(text = selection)
+	label.config( text = selection)
+	label.configure(background = 'white')
 
 root = Tk()
 drink = IntVar()
 D1 = Radiobutton(root, text="Redbull & Vodka", indicatoron=0, width=25, variable=drink, value=1,
                   command=sel)
-D1.place(x=30, y=0)
+D1.place(x=30, y=30)
 
 D2 = Radiobutton(root, text="Sangria", indicatoron=0, width=25, variable=drink, value=2,
                   command=sel)
-D2.place(x=280, y=0)
+D2.place(x=280, y=30)
 
 D3 = Radiobutton(root, text="Tequila sunrise", indicatoron=0, width=25, variable=drink, value=3,
                   command=sel)
-D3.place(x=530, y=0)
+D3.place(x=530, y=30)
 
 
 
@@ -55,9 +54,10 @@ R3 = Radiobutton(root, text="8 cl", indicatoron=0, width=10, variable=var, value
 R3.pack( side = LEFT )
 
 label = Label(root)
-label.pack()
+label.place(x=295, y=0)
+label.configure(background='white')
 root.overrideredirect(1)
+root.configure(background='white')
 root.geometry("800x480")
 root.bind("<Escape>", lambda e: e.widget.quit())
 root.mainloop()
-
